@@ -12,7 +12,7 @@
 	import Loading from '$components/Loading.svelte';
 	import Logo from '$components/Logo.svelte';
 	import IgnoredClickOutside from '$components/IgnoredClickOutside.svelte';
-	import Modal from '$components/modal.svelte';
+	import Modal from '$components/Modal.svelte';
 	import NewTaskModal from '$components/NewTaskModal.svelte';
 	import ClickOutside from '$components/clickOutside.svelte';
 

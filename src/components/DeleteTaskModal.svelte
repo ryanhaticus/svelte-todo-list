@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Modal from '$components/Modal.svelte';
-
 	import { deleteTask, tasks } from '$stores/tasks';
 	import type { ITask } from '$types/Task';
+	import Modal from '$components/Modal.svelte';
 
 	export let open = false;
 	export let selectedTaskId: string;

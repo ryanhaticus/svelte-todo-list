@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Logo from '$components/Logo.svelte';
-	import Modal from '$components/modal.svelte';
+	import Modal from '$components/Modal.svelte';
 
 	import { auth } from '$lib/firebase';
 
