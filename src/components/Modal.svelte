@@ -7,7 +7,7 @@
 		CheckIcon,
 		ExclamationIcon,
 	} from '@rgossiaux/svelte-heroicons/outline';
-	import ClickOutside from '$components/clickOutside.svelte';
+	import ClickOutside from '$components/ClickOutside.svelte';
 
 	const dispatch = createEventDispatcher();
 

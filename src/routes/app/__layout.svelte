@@ -14,7 +14,7 @@
 	import IgnoredClickOutside from '$components/IgnoredClickOutside.svelte';
 	import Modal from '$components/Modal.svelte';
 	import NewTaskModal from '$components/NewTaskModal.svelte';
-	import ClickOutside from '$components/clickOutside.svelte';
+	import ClickOutside from '$components/ClickOutside.svelte';
 
 	const { page } = getStores();
 
