@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Modal from './modal.svelte';
+	import Modal from '$components/Modal.svelte';
 
 	import { addTask, tasks } from '$stores/tasks';
 
