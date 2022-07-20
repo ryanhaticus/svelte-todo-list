@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Modal from '$components/modal.svelte';
+	import Modal from '$components/Modal.svelte';
 
 	import { user } from '$stores/auth';
 	import { appUser } from '$stores/user';
