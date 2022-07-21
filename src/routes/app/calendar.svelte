@@ -187,7 +187,7 @@
 				</button>
 				<button
 					type="button"
-					class="w-32 hidden border-t border-b border-gray-300 bg-white px-3.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 focus:relative md:block"
+					class="w-24 hidden border-t border-b border-gray-300 bg-white px-3.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 focus:relative md:block"
 					>{selectedMonthText}</button
 				>
 				<span class="relative -mx-px h-5 w-px bg-gray-300 md:hidden" />
