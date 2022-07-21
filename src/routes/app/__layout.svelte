@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ViewListIcon, MenuAlt1Icon } from '@rgossiaux/svelte-heroicons/outline';
+	import { ViewListIcon, MenuAlt1Icon, CalendarIcon } from '@rgossiaux/svelte-heroicons/outline';
 
-	import { fade, slide } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	import { goto } from '$app/navigation';
 	import { getStores } from '$app/stores';
@@ -20,6 +20,7 @@
 
 	const headers = [
 		{ name: 'My tasks', href: '/app' },
+		{ name: 'Calendar', href: '/app/calendar' },
 		{ name: 'Settings', href: '/app/settings' },
 	];
 
@@ -60,8 +61,8 @@
 				/>
 
 				<div
-					in:slide={{ delay: 200 }}
-					out:slide={{ duration: 200 }}
+					in:fly={{ delay: 200, x: -200 }}
+					out:fly={{ duration: 200, x: -200 }}
 					class="fixed inset-0 flex z-40"
 				>
 					<div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
@@ -103,6 +104,17 @@
 									>
 										<ViewListIcon class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" />
 										My tasks
+									</a>
+									<a
+										on:click={() => (mobileMenuOpen = false)}
+										href="/app/calendar"
+										class="text-gray-600 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md {$page
+											.url.pathname === '/app/calendar'
+											? 'bg-gray-100'
+											: 'hover:text-gray-900 hover:bg-gray-50'}"
+									>
+										<CalendarIcon class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" />
+										Calendar
 									</a>
 								</div>
 							</nav>
@@ -218,6 +230,18 @@
 							/>
 							My tasks
 						</a>
+						<a
+							href="/app/calendar"
+							class="text-gray-700group flex items-center px-2 py-2 text-sm font-medium rounded-md {$page
+								.url.pathname === '/app/calendar'
+								? 'bg-gray-200'
+								: 'hover:text-gray-900 hover:bg-gray-50'}"
+						>
+							<CalendarIcon
+								class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
+							/>
+							Calendar
+						</a>
 					</div>
 				</nav>
 			</div>
@@ -294,12 +318,12 @@
 			<main class="flex-1">
 				<!-- Page title & actions -->
 				<div
-					class="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+					class="border-b border-gray-200 px-4 py-4 flex items-center justify-between sm:px-6 lg:px-8"
 				>
 					<div class="flex-1 min-w-0">
 						<h1 class="text-lg font-medium leading-6 text-gray-900 sm:truncate">{header}</h1>
 					</div>
-					<div class="mt-4 flex sm:mt-0 sm:ml-4">
+					<div>
 						<IgnoredClickOutside>
 							<button
 								on:click={() => (newTaskModalOpen = true)}
