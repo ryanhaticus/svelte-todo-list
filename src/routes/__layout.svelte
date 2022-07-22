@@ -6,6 +6,7 @@
 	import '$stores/auth';
 	import '$stores/user';
 	import '$stores/tasks';
+	import PageTransition from '$components/PageTransition.svelte';
 </script>
 
 <svelte:head>

@@ -67,9 +67,7 @@
 	<div class="mt-8 flex flex-col">
 		<div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
 			<div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-				<div
-					class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
-				>
+				<div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
 					<table class="min-w-full divide-y divide-gray-300">
 						<thead class="bg-gray-50">
 							<tr>
@@ -78,14 +76,10 @@
 									class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
 									>Task</th
 								>
-								<th
-									scope="col"
-									class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+								<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
 									>Due Date</th
 								>
-								<th
-									scope="col"
-									class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+								<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
 									>Status (click to mark complete)</th
 								>
 								<th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
@@ -124,15 +118,13 @@
 												on:click={() => startDeletingTask(task.id)}
 												type="button"
 												class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-												>Delete<span class="sr-only">, {task.task}</span
-												></button
+												>Delete<span class="sr-only">, {task.task}</span></button
 											>
 											<button
 												on:click={() => startModifyingTask(task.id)}
 												type="button"
 												class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-												>Modify<span class="sr-only">, {task.task}</span
-												></button
+												>Modify<span class="sr-only">, {task.task}</span></button
 											></IgnoredClickOutside
 										>
 									</td>
@@ -149,17 +141,13 @@
 	<div class="sm:flex sm:items-center">
 		<div class="sm:flex-auto">
 			<h1 class="text-xl font-semibold text-gray-900">Complete tasks</h1>
-			<p class="mt-2 text-sm text-gray-700">
-				A list of all your completed tasks
-			</p>
+			<p class="mt-2 text-sm text-gray-700">A list of all your completed tasks</p>
 		</div>
 	</div>
 	<div class="mt-8 flex flex-col">
 		<div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
 			<div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-				<div
-					class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
-				>
+				<div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
 					<table class="min-w-full divide-y divide-gray-300">
 						<thead class="bg-gray-50">
 							<tr>
@@ -168,14 +156,10 @@
 									class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
 									>Task</th
 								>
-								<th
-									scope="col"
-									class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+								<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
 									>Due Date</th
 								>
-								<th
-									scope="col"
-									class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+								<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
 									>Status (click to mark incomplete)</th
 								>
 								<th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
@@ -213,15 +197,13 @@
 												on:click={() => startDeletingTask(task.id)}
 												type="button"
 												class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-												>Delete<span class="sr-only">, {task.task}</span
-												></button
+												>Delete<span class="sr-only">, {task.task}</span></button
 											>
 											<button
 												on:click={() => startModifyingTask(task.id)}
 												type="button"
 												class="ml-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-												>Modify<span class="sr-only">, {task.task}</span
-												></button
+												>Modify<span class="sr-only">, {task.task}</span></button
 											></IgnoredClickOutside
 										>
 									</td>

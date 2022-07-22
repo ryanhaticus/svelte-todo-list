@@ -15,6 +15,7 @@
 	import Modal from '$components/Modal.svelte';
 	import NewTaskModal from '$components/NewTaskModal.svelte';
 	import ClickOutside from '$components/ClickOutside.svelte';
+	import PageTransition from '$components/PageTransition.svelte';
 
 	const { page } = getStores();
 
@@ -40,7 +41,7 @@
 
 {#if $authenticated && $appUser}
 	<NewTaskModal bind:open={newTaskModalOpen} />
-	<div class="min-h-full">
+	<div class="min-h-screen">
 		<!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
 		{#if mobileMenuOpen}
 			<div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
@@ -315,7 +316,7 @@
 					</div>
 				</div>
 			</div>
-			<main class="flex-1">
+			<main class="flex-1 flex flex-col min-h-screen">
 				<!-- Page title & actions -->
 				<div
 					class="border-b border-gray-200 px-4 py-4 flex items-center justify-between sm:px-6 lg:px-8"
@@ -335,8 +336,10 @@
 					</div>
 				</div>
 
-				<div class="px-4 mt-6 sm:px-6 lg:px-8">
-					<slot />
+				<div class="flex-grow px-4 pt-6 sm:px-6 lg:px-8">
+					<PageTransition>
+						<slot /></PageTransition
+					>
 				</div>
 			</main>
 		</div>
