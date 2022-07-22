@@ -22,7 +22,7 @@
 			type = 'success';
 			titleText = 'You have signed in';
 			descriptionText = 'Please wait while we redirect you';
-			submitText = 'Close';
+			submitText = 'Redirect to app';
 		} catch (untypedError: unknown) {
 			const error = untypedError as { code: string };
 
@@ -68,7 +68,13 @@
 	{descriptionText}
 	{type}
 	submitOnly={true}
-	on:submit={() => (modalOpen = false)}
+	on:submit={() => {
+		if (type === 'success') {
+			window.location.href = '/app';
+			return;
+		}
+		modalOpen = false;
+	}}
 />
 
 <div class="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
